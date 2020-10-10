@@ -1,0 +1,25 @@
+<form>
+    <br><br>
+    <div class="container">
+    <div class="form-group">
+      <label for="FormControlInput1">Titulo del Post</label>
+      <input type="text" class="form-control" id="FormControlInput1" placeholder="Titulo" required>
+    </div>
+    <div class="form-group">
+      <label for="FormControlSelect1">Sección</label>
+      <select class="form-control" id="FormControlSelect1" required>
+        <option>Duda</option>
+        <option>Opinión</option>
+        <option>Queja</option>
+        <option>Aporte</option>
+        <option>Libre</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Expresate aquí</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" required></textarea>
+    </div>
+    <button type="button" class="btn btn-success" [routerLink]="['/']">Ingresar</button>
+    <br><br><br>
+</div>
+  </form>

@@ -1,0 +1,60 @@
+<br>
+<br>
+<br>
+<body style="background-size:2000px;background-image:url(assets/img/letu.jpg)">
+    <br><br><br>
+    <div class="container" style="background-color: transparent;">
+        <div class="row">
+            <div class=" text-center">
+                <a routerLink="/login"><img src="assets/img/icon.png" width="65px" height="65px" /></a>
+            </div>
+            <div class="col-md-12 text-center">
+                <button name="btn" type="button" class="btn btn-outline-light">Registrarse</button>
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-4 offset-4">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="user" style="color: white">Nombre</label>
+                        <input type="text" name="user" required id="user" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="matricula" style="color: white">Matricula</label>
+                        <input type="number" name="matricula" required id="matricula" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="cuatrimestre" style="color: white">Cuatrimestre</label>
+                        <input type="number" name="cuatrimestre" required id="cuatrimestre" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="grupo" style="color: white">Grupo</label>
+                        <input type="text" name="grupo" required id="grupo" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="carrera" style="color: white">Carrera</label>
+                        <input type="text" name="carrera" required id="carrera" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="pass" style="color: white">Contraseña</label>
+                        <input type="text" name="pass" required id="pass" class="form-control" value="">
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <button type="submit" name="btn" value="registro" class="btn btn-outline-primary" [routerLink]="['/']">Guardar</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+<br><br><br>
