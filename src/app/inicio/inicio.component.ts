@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+//service
+import { PostsService } from '../services/posts.service';
+
+//Class post
+import { Posts } from '../models/posts';
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
@@ -7,9 +13,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  postsList: Posts[];
 
-  ngOnInit(): void {
+  constructor(
+    private postsServices: PostsService
+  ) { }
+
+  ngOnInit(){
+    this.postsServices.getPosts()
+    .snapshotChanges()
+    .suscribe(items => {
+      this.postsList = [];
+      items.forEach(element => {
+        let x = element.payload.toJSON();
+        x["$key"] = element.key;
+        this.postsList.push(x as Posts);
+      });
+    });
   }
 
 }
