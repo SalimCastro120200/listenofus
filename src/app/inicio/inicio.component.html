@@ -3,10 +3,12 @@
         <h6 class="text-center">Nuevos Posts</h6>
         <table class="table table-sm table-hover">
             <tbody>
+                <br><br>
                 <tr *ngFor="let posts of postsList">
                     <td>{{posts.titulo}}</td>
                     <td>{{posts.contenido}}</td>
                 </tr>
+                <br><br><br>
             </tbody>
         </table>
     </div>
