@@ -1,14 +1,12 @@
 <div class="card mt-5">
     <div class="card-body">
-        <form #postsForm="ngForm" (ngSubmit)="onSubmit(postsForm)">
+        <form>
  
             <div class="form-group">
               <input 
                 type="email"
                 class="form-control"
                 name="correo"
-                #name="ngModel"
-                [(ngModel)]="postsService.selectPosts.titulo"
                 placeholder="Correo"
                 >
             </div>
@@ -17,8 +15,6 @@
                   type="password"
                   class="form-control"
                   name="password    "
-                  #category="ngModel"
-                  [(ngModel)]="postsService.selectPosts.contenido"
                   placeholder="Contraseña"
                   >
               </div>
