@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireList, AngularFireDatabase } from 'angularfire2/database';
 import { Secciones } from '../models/secciones';
 
+@Injectable()
 export class SeccionesService {
   seccionesList: AngularFireList<any>;
   selectSeciones: Secciones = new Secciones();

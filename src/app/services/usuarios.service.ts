@@ -4,6 +4,7 @@ import { AngularFireList, AngularFireDatabase } from 'angularfire2/database';
 import { Usuarios } from '../models/usuarios';
 
 
+@Injectable()
 export class UsuariosService {
 
   usuariosList: AngularFireList<any>;
