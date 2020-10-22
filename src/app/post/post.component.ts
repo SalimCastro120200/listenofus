@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 //  Service
 import { PostsService } from '../services/posts.service';
 import { Posts } from '../models/posts';
-import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-post',
@@ -16,10 +16,23 @@ export class PostComponent implements OnInit {
 
   ngOnInit() {
     this.postsService.getPosts();
+    this.resetForm();
   }
 
   onSubmit(postsForm: NgForm){
-    this.postsService.insertPosts(postsForm.value);
+    if(postsForm.value.$key == null){
+      this.postsService.insertPosts(postsForm.value);
+    }else{
+    this.resetForm(postsForm);
+    }
+  }
+
+  resetForm(postsForm?: NgForm)
+  {
+    if(postsForm != null){
+      postsForm.reset();
+      this.postsService.selectPosts = new Posts();
+    }
   }
 
 }

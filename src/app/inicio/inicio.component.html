@@ -1,12 +1,13 @@
-<div class="card">
+<div class="row d-flex justify-content-center">
     <div>
         <h6 class="text-center">Nuevos Posts!</h6>
         <table class="table table-sm table-hover">
             <tbody>
                 <br><br>
                 <tr *ngFor="let posts of postsList">
-                    <td>{{posts.titulo}}</td>
-                    <td>{{posts.contenido}}</td>
+                    <td><h3>Tema</h3><br>{{posts.titulo}}</td>
+                    <td><h3>Contenido</h3><br>{{posts.contenido}}<br><br><br></td>
+
                 </tr>
                 <br><br><br>
             </tbody>
