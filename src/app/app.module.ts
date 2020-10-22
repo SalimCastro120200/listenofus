@@ -21,7 +21,6 @@ import { environment } from '../environments/environment';
 
 //services
 import { PostsService} from './services/posts.service';
-import { SeccionesService } from './services/secciones.service';
 import { UsuariosService } from './services/usuarios.service';
 
 const routes: Routes = [
@@ -53,7 +52,6 @@ const routes: Routes = [
   ],
   providers: [
     PostsService,
-    SeccionesService,
     UsuariosService
   ],
   bootstrap: [AppComponent]

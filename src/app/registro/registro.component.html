@@ -1,60 +1,86 @@
-<br>
-<br>
-<br>
-<body style="background-size:2000px;background-image:url(assets/img/letu.jpg)">
-    <br><br><br>
-    <div class="container" style="background-color: transparent;">
-        <div class="row">
-            <div class=" text-center">
-                <a routerLink="/login"><img src="assets/img/icon.png" width="65px" height="65px" /></a>
+<div class="card mt-5">
+    <div class="card-body">
+        <form #usuariosForm="ngForm" (ngSubmit)="onSubmit(usuariosForm)">
+            <!-- TO UPDATE -->
+            <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="usuariosService.selectUsuarios.$key">
+  
+            <div class="form-group">
+              <input 
+                type="text"
+                class="form-control"
+                name="nombre"
+                #name="ngModel"
+                [(ngModel)]="usuariosService.selectUsuarios.nombre"
+                placeholder="Nombre Completo"
+                >
             </div>
-            <div class="col-md-12 text-center">
-                <button name="btn" type="button" class="btn btn-outline-light">Registrarse</button>
+            <div class="form-group">
+                <input 
+                  type="email"
+                  class="form-control"
+                  name="correo"
+                  #category="ngModel"
+                  [(ngModel)]="usuariosService.selectUsuarios.correo"
+                  placeholder="Correo"
+                  >
             </div>
-
+            <div class="form-group">
+                <input 
+                  type="password"
+                  class="form-control"
+                  name="password"
+                  #category="ngModel"
+                  [(ngModel)]="usuariosService.selectUsuarios.password"
+                  placeholder="Contraseña"
+                  >
+            </div>
+            <div class="form-group">
+              <input 
+                type="text"
+                class="form-control"
+                name="carrera"
+                #category="ngModel"
+                [(ngModel)]="usuariosService.selectUsuarios.carrera"
+                placeholder="Carrera"
+                >
+          </div>
+          <div class="form-group">
+            <input 
+              type="number"
+              class="form-control"
+              name="cuatrimestre"
+              #category="ngModel"
+              [(ngModel)]="usuariosService.selectUsuarios.cuatrimestre"
+              placeholder="Cuatrimestre"
+              >
         </div>
-        <br>
-        <br>
-        <br>
-        <div class="row">
-            <div class="col-md-4 offset-4">
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="user" style="color: white">Nombre</label>
-                        <input type="text" name="user" required id="user" class="form-control" value="">
-                    </div>
-                    <div class="form-group">
-                        <label for="matricula" style="color: white">Matricula</label>
-                        <input type="number" name="matricula" required id="matricula" class="form-control" value="">
-                    </div>
-                    <div class="form-group">
-                        <label for="cuatrimestre" style="color: white">Cuatrimestre</label>
-                        <input type="number" name="cuatrimestre" required id="cuatrimestre" class="form-control" value="">
-                    </div>
-                    <div class="form-group">
-                        <label for="grupo" style="color: white">Grupo</label>
-                        <input type="text" name="grupo" required id="grupo" class="form-control" value="">
-                    </div>
-                    <div class="form-group">
-                        <label for="carrera" style="color: white">Carrera</label>
-                        <input type="text" name="carrera" required id="carrera" class="form-control" value="">
-                    </div>
-                    <div class="form-group">
-                        <label for="pass" style="color: white">Contraseña</label>
-                        <input type="text" name="pass" required id="pass" class="form-control" value="">
-                    </div>
-                    <div class="col-md-12 text-center">
-                        <button type="submit" name="btn" value="registro" class="btn btn-outline-primary" [routerLink]="['/']">Guardar</button>
-                    </div>
-                    
-                </form>
-            </div>
+        <div class="form-group">
+          <input 
+            type="text"
+            class="form-control"
+            name="grupo"
+            #category="ngModel"
+            [(ngModel)]="usuariosService.selectUsuarios.grupo"
+            placeholder="Grupo"
+            >
         </div>
-
+        <div class="form-group">
+          <input 
+            type="text"
+            class="form-control"
+            name="matricula"
+            #category="ngModel"
+            [(ngModel)]="usuariosService.selectUsuarios.matricula"
+            placeholder="Matricula"
+            >
+        </div>
+  
+            <div class="form-group">
+              <br>
+              <button class="btn btn-success" type="submit" [routerLink]="['/']">Añadir Usuario
+              </button>
+              <br><br>
+            </div>
+          </form>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-</body>
-<br><br><br>
+  </div>
