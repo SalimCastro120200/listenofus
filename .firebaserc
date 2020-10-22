@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "listen-of-us": {
+      "hosting": {
+        "listenofus": [
+          "listen-of-us"
+        ]
+      }
+    }
+  }
+}
