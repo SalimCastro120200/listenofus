@@ -12,7 +12,7 @@ import { NgForm } from '@angular/forms';
 })
 export class PostComponent implements OnInit {
 
-  constructor(private postsService: PostsService) { }
+  constructor(public postsService: PostsService) { }
 
   ngOnInit() {
     this.postsService.getPosts();

@@ -22,7 +22,7 @@ export class InicioComponent implements OnInit {
   ngOnInit(){
     this.postsServices.getPosts()
     .snapshotChanges()
-    .suscribe(items => {
+    .subscribe(items => {
       this.postsList = [];
       items.forEach(element => {
         let x = element.payload.toJSON();
