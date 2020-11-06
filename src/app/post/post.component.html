@@ -5,6 +5,7 @@
           <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="postsService.selectPosts.$key">
 
           <div class="form-group">
+            <label for="titulo">Titulo </label><br>
             <input 
               type="text"
               class="form-control"
@@ -15,6 +16,7 @@
               >
           </div>
           <div class="form-group">
+            <label for="contenido">Contenido </label><br>
               <input 
                 type="text"
                 class="form-control"
@@ -23,8 +25,8 @@
                 [(ngModel)]="postsService.selectPosts.contenido"
                 placeholder="Añade tus pensamientos..."
                 >
-            </div>
-
+          </div>
+          <br>
           <div class="form-group">
             <br>
             <button class="btn btn-success" type="submit">Añadir Post
