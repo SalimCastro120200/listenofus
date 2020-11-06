@@ -4,11 +4,10 @@
         <table class="table table-sm table-hover">
             <tbody>
                 <br><br>
-                <tr *ngFor="let posts of postsList">
+                <tr *ngIf="posts.opinion">
                     <td><h3>Tema</h3><br>{{posts.titulo}}</td>
                     <td><h3>Contenido</h3><br>{{posts.contenido}}</td>
                     <td><h3>Sección</h3><br>{{posts.seccion}}<br><br><br></td>
-
                 </tr>
                 <br><br><br>
             </tbody>

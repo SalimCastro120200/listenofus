@@ -17,7 +17,8 @@ export class PostsService {
   insertPosts(posts: Posts){
     this.postsList.push({
       contenido: posts.contenido,
-      titulo: posts.titulo
+      titulo: posts.titulo,
+      seccion: posts.seccion
     });
   }
 }

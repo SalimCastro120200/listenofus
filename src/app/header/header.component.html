@@ -1,8 +1,16 @@
-<header><div class="wrapper">
-    <div class="logo" href="#">Listen Of Us!</div>
-        
-        <nav>
+<header>
+    <div class="wrapper">
+    <div class="logo">Listen Of Us!</div>
+        <nav >
             <a [routerLink]="['/']">Inicio</a>
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sección
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Opinión</a>
+                <a class="dropdown-item" href="#">Duda</a>
+                <a class="dropdown-item" href="#">Ocio</a>
+              </div>
             <a [routerLink]="['/post']">Añadir Nuevo Post</a>
             <button type="button" class="btn btn-success" [routerLink]="['/login']">Ingresar</button>
         </nav>
